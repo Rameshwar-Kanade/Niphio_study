@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-helm-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+      annotations:
+        k8s.v1.cni.cncf.io/networks: {{ .Values.nad.name }}
+    spec:
+      containers:
+      - name: {{ .Values.pod.name }}
+        image: {{ .Values.pod.image }}
+        env:
+          - name: APP_CONFIG
+            valueFrom:
+              configMapKeyRef:
+                name: my-config
+                key: APP_CONFIG
