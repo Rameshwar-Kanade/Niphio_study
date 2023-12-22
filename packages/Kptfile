@@ -1,6 +1,0 @@
-apiVersion: kpt.dev/v1
-kind: Kptfile
-metadata:
-  name: my-kpt-package
-info:
-  description: A kpt package for Kubernetes resources
