@@ -1,9 +1,0 @@
-apiVersion: kpt.dev/v1
-kind: Kptfile
-metadata:
-  name: Pod_deployment
-info:
-  description: Generates POD deployment from configMap
-pipeline:
-  mutators:
-    - image: rameshwarkanade/kptfunction:v1

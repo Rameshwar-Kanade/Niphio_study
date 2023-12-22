@@ -1,9 +1,0 @@
-apiVersion: kpt.dev/v1
-kind: Kptfile
-metadata:
-  name: deployment
-info:
-  description: change  labels for deployment and service
-pipeline:
-  mutators:
-    - image: rameshwarkanade/kptfunction:v1
