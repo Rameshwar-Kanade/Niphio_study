@@ -66,7 +66,7 @@ kubectl get cm
 kubectl get network-attachment-definitions
 ```
 
-### 2. Helm Charts
+### II. Helm Charts
 ```
 git clone https://github.com/Rameshwar-Kanade/Niphio_study/tree/main/Helmchart
 ```
