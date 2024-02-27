@@ -4,9 +4,6 @@ import (
 	"context"
 	"flag"
 	"fmt"
-
-	// "github.com/Rameshwar-Kanade/application/go/pkg/mod/k8s.io/client-go@v0.29.2/rest"
-	// "github.com/Rameshwar-Kanade/application/go/pkg/mod/k8s.io/client-go@v0.29.2/tools/clientcmd"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/rest"
