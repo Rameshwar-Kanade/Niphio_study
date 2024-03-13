@@ -6,6 +6,3 @@ metadata:
     config.kubernetes.io/local-config: "true"
 info:
   description: sample description
-packageMetadata:
-  annotations:
-    config.kubernetes.io/package-variant: "my-package-variant"
