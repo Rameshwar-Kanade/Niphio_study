@@ -4,8 +4,3 @@ metadata:
   name: application
   annotations:
     config.kubernetes.io/local-config: "true"
-upstream:
-  git:
-    repo: https://github.com/Rameshwar-Kanade/Nephio_study.git
-    ref: v1
-    path: Packagevariant/application
