@@ -8,4 +8,4 @@ upstream:
   git:
     repo: https://github.com/Rameshwar-Kanade/Nephio_study.git
     ref: v1
-    path: Packagevariant/application
+path: Packagevariant/application
