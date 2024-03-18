@@ -1,0 +1,15 @@
+apiVersion: configsync.gke.io/v1beta1
+kind: RootSync
+metadata:
+  name: example-cluster-name
+  namespace: config-management-system
+  annotations:
+    internal.kpt.dev/upstream-identifier: 'configsync.gke.io|RootSync|config-management-system|example-cluster-name'
+spec:
+  sourceFormat: unstructured
+  git:
+    repo: https://github.com/Rameshwar-Kanade/downstream.git
+    branch: main
+    auth: token
+    secretRef:
+      name: example-cluster-name-access-token-configsync

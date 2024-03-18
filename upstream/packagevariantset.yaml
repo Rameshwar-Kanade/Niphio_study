@@ -1,0 +1,27 @@
+apiVersion: config.porch.kpt.dev/v1alpha1
+kind: PackageVariant
+metadata:
+  namespace: my
+  name: example-aaaa
+  labels:
+    app: foo
+spec:
+  upstream:
+    repo: https://github.com/Rameshwar-Kanade/upstream.git
+    package: my-upstream-package
+    revision: v1
+  downstream:
+    repo: https://github.com/Rameshwar-Kanade/downstream.git
+    package: my-downstream-package
+  labels:
+    package-type: namespace
+    org: hr
+  pipeline:
+    mutators:
+      - image: gcr.io/kpt-fn/set-namespace:v0.1
+        configMap:
+          namespace: my-ns
+        name: my-func
+      - image: gcr.io/kpt-fn/set-labels:v0.1
+        configMap:
+          app: foo
